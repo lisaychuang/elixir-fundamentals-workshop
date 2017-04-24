@@ -1,6 +1,10 @@
 
 formatter = fn(symbol) ->
-  # TODO
+  fn
+    0 -> "0";
+    val when val < 0 -> "(#{symbol} #{abs(val)})"
+    val when val > 0 -> "#{symbol} #{val}"
+  end
 end
 
 ##### TESTS #####
