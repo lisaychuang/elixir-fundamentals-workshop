@@ -298,10 +298,11 @@ Structs are special flavors of Map, where you can define properties and enable p
 
 Example:
 ```
-defmodule MobileApp do
-  defstruct name: "", platforms: ["ios"]
-  def download_url(%MobileApp{name: app_name, platforms: ["ios"]}) do
-    "https:!/dl.apple.com?name=!#app_name}"
+defmodule CreditCard do
+  defstruct type: "", expire_year: 0
+  def process(%CreditCard{type: type , expire_year: year}) 
+    when year >= 2017 and type in ["visa", "mastercard", "amex"] do
+      "OK!"
   end
 end
 ```
