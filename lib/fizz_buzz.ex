@@ -6,6 +6,11 @@ defmodule FizzBuzz do
   end
 
   defp player_turn(number) do
-    number # Replace with your real answer
+    case number do 
+      x when rem(number,3)==0 and rem(number,5) ==0 -> "FizzBuzz"
+      x when rem(number,3) == 0 -> "Fizz"
+      x when rem(number,5) == 0 -> "Buzz"
+      _ -> number
+    end
   end
 end
