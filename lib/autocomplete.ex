@@ -18,6 +18,7 @@ defmodule Autocomplete do
     |> File.read!
     |> String.split("\n")
     |> Enum.filter(fn w -> String.starts_with?(w, lower_hint) end)
+    |> Enum.take(30)
   end
   
   '''
@@ -26,6 +27,13 @@ defmodule Autocomplete do
   defp get_completions_good(hint) when is_bitstring(hint) and byte_size(hint) > 2 do
     lower_hint = String.downcase(hint)
     # PUT EXERCISE 10 SOLUTION HERE
+    
+     "words.txt"
+    |> File.stream!
+    |> Stream.filter(fn w -> String.starts_with?(w, lower_hint) end)
+    |> Stream.map(fn w -> String.replace(w, ~r/\n/,"") end)
+    |> Stream.take(30)
+    |> Enum.to_list
   end
 
   # a function used to benchmark the autocomplete
