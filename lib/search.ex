@@ -5,8 +5,8 @@ defmodule Search do
         results = Autocomplete.get_completions(term)
         IO.puts "received term: #{term}, found #{length(results)} completions"
         send(sender, {self(), {:completions, results}})
-        start
     end
+    start
   end
 
   def run(term) do
@@ -31,6 +31,7 @@ defmodule Search do
       x -> 
         Logger.error "Unknown message"
         IO.inspect x
+        :sad
     end
   end
 end
