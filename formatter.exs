@@ -1,5 +1,13 @@
 
 formatter = fn
+  # num when num < -1000 -> "#{num/1000}K"
+  # num when num < 1000 -> "#{num}"
+  # num when (num >= 1000) and (num <= 999999) -> "#{num/1000}K"
+  # num when (num >= 1000000) -> "#{num/1000000}M"
+
+  num when abs(num) >= 1000000 -> "#{num/1000000}M"
+  num when abs(num) >= 1000 -> "#{num/1000}K"
+  num -> "#{num}"
   _ -> "placeholder"
 end
 

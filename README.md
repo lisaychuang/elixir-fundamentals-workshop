@@ -17,7 +17,18 @@ This course is created by [Mike North](https://github.com/mike-north), see below
 
 I'll be adding notes from training on 2018/4/19 here!
 
+### Anonymous Function
+Anonymous functions have implicit returns (similar to Ruby), where the last statement in the function is the return value
 
+Example:
+`fn x -> x * x end`
+
+### Print to console debugging
+h IO.puts - help docs
+IO.inspect - logging out
+elixir - compiles files and execute
+IEx - interactive Elixir 
+iex.pry - breakpoints 
 
 
 # License
