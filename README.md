@@ -9,27 +9,15 @@
   </a>
 </p> 
 
-## Installation
+# [Mike North's Elixir Fundamentals Course](https://github.com/mike-works/elixir-fundamentals)
 
-# Setting Up
-* First, you'll need to ensure you have [Elixir](http://elixir-lang.org/install.html) installed on your computer. This workshop requires that you have version `1.4` installed, which requires Erlang `v18`.
+This course is created by [Mike North](https://github.com/mike-north), see below notes for licensing information. 
 
-* Next, clone this project
-```sh
-git clone https://github.com/mike-works/elixir-fundamentals.git myelixir
-```
-* Then, go into the project and install dependencies
-```sh
-cd myelixir
-mix deps.get
-```
+# Lisa's notes
 
-## Development Environment
+I'll be adding notes from training on 2018/4/19 here!
 
-Setup a development environment that includes Elixir syntax hilighting. I recommend [Visual Studio Code](https://code.visualstudio.com/) with the following plugins
-* [vscode-elixir](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) - for syntax hilighting and intellisense (autocomplete) of Elixir and Erlang core libraries.
-* [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) - for quick execution of code snippets
-* [Dark+ Elixir (color theme)](https://marketplace.visualstudio.com/items?itemName=kkalita.dark-plus-elixir) - highlights some important parts of the language syntax more prominently than many default themes
+
 
 
 # License
