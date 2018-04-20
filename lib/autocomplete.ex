@@ -30,7 +30,7 @@ defmodule Autocomplete do
     "words.txt"
     |> File.stream!
     |> Stream.filter(fn w -> String.starts_with?(w, lower_hint) end)
-    |> Stream.map(fn word -> word |> String.trim)
+    |> Stream.map(fn word -> word |> String.trim end )
     |> Stream.take(30)
     |> Enum.to_list
 

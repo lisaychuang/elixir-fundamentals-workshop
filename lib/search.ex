@@ -1,6 +1,20 @@
+require Logger
+
 defmodule Search do
   def start do
-    
+    receive do
+      {sender_pid, {:complete_me, term}} ->
+        IO.puts "Beging search for #{term}"
+        results = term  #results is a linked list
+        |> Autocomplete.get_completions
+        send(sender_pid, {self(), {:completions, results} })
+      start
+
+      x ->
+        Logger.error "Unknown msg"
+        IO.inspect x
+        start
+    end
   end
   def run(term) do
     import Logger
